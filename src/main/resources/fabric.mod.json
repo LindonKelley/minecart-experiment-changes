@@ -1,33 +1,26 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "minecart_experiment_changes",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Minecart Experimental Changes",
+	"description": "Merging the minecart experiment with some non-experimental 'features'",
 	"authors": [
-		"Me!"
+		"LindonKelley"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/LindonKelley/minecart-experiment-changes",
+		"sources": "https://github.com/LindonKelley/minecart-experiment-changes"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"license": "GPL-3.0-or-later",
+	"icon": "assets/minecart_experiment_changes/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
-		],
-		"client": [
-			"com.example.ExampleModClient"
+			"io.github.lindonkelley.MinecartExperimentChanges"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
-			"environment": "client"
-		}
+		"minecart_experiment_changes.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.10",
@@ -37,5 +30,6 @@
 	},
 	"suggests": {
 		"another-mod": "*"
-	}
+	},
+	"accessWidener": "minecart_experiment_changes.accesswidener"
 }

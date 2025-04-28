@@ -22,12 +22,12 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"modid" {
+		"minecart_experiment_changes" {
 			sourceSet sourceSets.main
-			sourceSet sourceSets.client
 		}
 	}
 
+	accessWidenerPath = file("src/main/resources/minecart_experiment_changes.accesswidener")
 }
 
 dependencies {

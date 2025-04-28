@@ -11,7 +11,5 @@ public class MinecartExperimentChanges implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
-	public void onInitialize() {
-		LOGGER.info("hello");
-	}
+	public void onInitialize() {}
 }

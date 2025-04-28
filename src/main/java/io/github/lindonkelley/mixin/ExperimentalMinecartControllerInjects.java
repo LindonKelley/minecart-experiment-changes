@@ -37,7 +37,7 @@ public abstract class ExperimentalMinecartControllerInjects extends MinecartCont
 		),
 		locals = LocalCapture.CAPTURE_FAILHARD
 	)
-	// TODO fix the maxShiftBy warning
+	
 	public void snapMinecartDown(ServerWorld world, CallbackInfo info, ExperimentalMinecartController.MoveIteration moveIteration, Vec3d velocity, @Local LocalRef<BlockPos> blockPos, @Local LocalRef<BlockState> blockState, @Local LocalBooleanRef blockStateIsRail) {
 		if (!blockStateIsRail.get()) {
 			BlockPos flooredBlockPos = BlockPos.ofFloored(this.minecart.getPos()).down();

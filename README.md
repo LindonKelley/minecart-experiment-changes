@@ -1,9 +1,5 @@
-# Fabric Example Mod
+# Minecart Experiment Changes
 
-## Setup
+Reimplements useful bugs from the non-experimental minecart implementation. So far, just the "mud bug" is implemented:
 
-For setup instructions please see the [fabric documentation page](https://docs.fabricmc.net/develop/getting-started/setting-up-a-development-environment) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+![image](src/main/resources/assets/minecart_experiment_changes/icon.png)

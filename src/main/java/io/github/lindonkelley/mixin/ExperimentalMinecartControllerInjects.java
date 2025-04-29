@@ -30,14 +30,11 @@ public abstract class ExperimentalMinecartControllerInjects extends MinecartCont
 		method = "moveOnRail",
 		require = 1,
 		at = @At(
-			value = "INVOKE",
-			target = "Lnet/minecraft/block/AbstractRailBlock;isRail(Lnet/minecraft/block/BlockState;)Z",
-			shift = At.Shift.BY,
-			by = 2
+			value = "INVOKE_ASSIGN",
+			target = "Lnet/minecraft/block/AbstractRailBlock;isRail(Lnet/minecraft/block/BlockState;)Z"
 		),
 		locals = LocalCapture.CAPTURE_FAILHARD
 	)
-	
 	public void snapMinecartDown(ServerWorld world, CallbackInfo info, ExperimentalMinecartController.MoveIteration moveIteration, Vec3d velocity, @Local LocalRef<BlockPos> blockPos, @Local LocalRef<BlockState> blockState, @Local LocalBooleanRef blockStateIsRail) {
 		if (!blockStateIsRail.get()) {
 			BlockPos flooredBlockPos = BlockPos.ofFloored(this.minecart.getPos()).down();

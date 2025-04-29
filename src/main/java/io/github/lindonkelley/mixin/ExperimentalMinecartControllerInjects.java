@@ -7,6 +7,7 @@ import net.minecraft.entity.vehicle.ExperimentalMinecartController;
 import net.minecraft.entity.vehicle.MinecartController;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 
 import org.spongepowered.asm.mixin.Mixin;
@@ -25,7 +26,7 @@ public abstract class ExperimentalMinecartControllerInjects extends MinecartCont
 	protected ExperimentalMinecartControllerInjects(AbstractMinecartEntity minecart) {
 		super(minecart);
 	}
-	
+
 	@Inject(
 		method = "moveOnRail",
 		require = 1,
@@ -48,5 +49,12 @@ public abstract class ExperimentalMinecartControllerInjects extends MinecartCont
 				}
 			}
 		}
+	}
+	
+	@Override
+	public Direction getHorizontalFacing() {
+		return this.minecart.isYawFlipped()
+			? this.minecart.getHorizontalFacing().getOpposite().rotateYClockwise()
+			: this.minecart.getHorizontalFacing().rotateYClockwise();
 	}
 }

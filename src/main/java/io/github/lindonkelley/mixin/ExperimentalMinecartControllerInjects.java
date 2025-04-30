@@ -27,6 +27,7 @@ public abstract class ExperimentalMinecartControllerInjects extends MinecartCont
 		super(minecart);
 	}
 
+	// mud bug reimplementation
 	@Inject(
 		method = "moveOnRail",
 		require = 1,
@@ -51,6 +52,7 @@ public abstract class ExperimentalMinecartControllerInjects extends MinecartCont
 		}
 	}
 	
+	// activator rail fix, implements the default controller's override
 	@Override
 	public Direction getHorizontalFacing() {
 		return this.minecart.isYawFlipped()
